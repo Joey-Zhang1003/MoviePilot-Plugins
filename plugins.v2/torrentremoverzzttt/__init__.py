@@ -18,7 +18,7 @@ from app.utils.string import StringUtils
 lock = threading.Lock()
 
 
-class TorrentRemover(_PluginBase):
+class TorrentRemoverzzttt(_PluginBase):
     # 插件名称
     plugin_name = "自动删种自改V2.2.1"
     # 插件描述
@@ -32,7 +32,7 @@ class TorrentRemover(_PluginBase):
     # 作者主页
     author_url = "https://github.com/Joey-Zhang1003"
     # 插件配置项ID前缀
-    plugin_config_prefix = "torrentremover_"
+    plugin_config_prefix = "torrentremoverzzttt_"
     # 加载顺序
     plugin_order = 8
     # 可使用的用户级别
@@ -146,7 +146,7 @@ class TorrentRemover(_PluginBase):
         """
         if self.get_state():
             return [{
-                "id": "TorrentRemover",
+                "id": "TorrentRemoverzzttt",
                 "name": "自动删种服务",
                 "trigger": CronTrigger.from_crontab(self._cron),
                 "func": self.delete_torrents,
