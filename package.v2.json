@@ -1,11 +1,11 @@
 {
      "TorrentRemover": {
-        "name": "自动删种",
+        "name": "自动删种自改V2.2.1",
         "description": "自动删除下载器中的下载任务。",
         "labels": "做种",
-        "version": "2.2",
+        "version": "2.2.1",
         "icon": "delete.jpg",
-        "author": "jxxghp",
+        "author": "zzttt",
         "level": 2,
         "history": {
             "v2.2": "优化执行周期输入，需要MoviePilot v2.2.1+",
