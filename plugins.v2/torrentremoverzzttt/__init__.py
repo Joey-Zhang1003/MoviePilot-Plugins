@@ -20,17 +20,17 @@ lock = threading.Lock()
 
 class TorrentRemover(_PluginBase):
     # 插件名称
-    plugin_name = "自动删种"
+    plugin_name = "自动删种自改V2.2.1"
     # 插件描述
     plugin_desc = "自动删除下载器中的下载任务。"
     # 插件图标
     plugin_icon = "delete.jpg"
     # 插件版本
-    plugin_version = "2.2"
+    plugin_version = "2.2.1"
     # 插件作者
-    plugin_author = "jxxghp"
+    plugin_author = "zzttt"
     # 作者主页
-    author_url = "https://github.com/jxxghp"
+    author_url = "https://github.com/Joey-Zhang1003"
     # 插件配置项ID前缀
     plugin_config_prefix = "torrentremover_"
     # 加载顺序
@@ -704,7 +704,7 @@ class TorrentRemover(_PluginBase):
         minsize = float(sizes[0]) * 1024 * 1024 * 1024 if sizes else 0
         maxsize = float(sizes[-1]) * 1024 * 1024 * 1024 if sizes else 0
         # 分享率
-        if self._ratio and torrent.ratio <= float(self._ratio):
+        if self._ratio and torrent.ratio >= float(self._ratio):
             return None
         # 做种时间 单位：小时
         if self._time and torrent_seeding_time <= float(self._time) * 3600:
@@ -748,7 +748,7 @@ class TorrentRemover(_PluginBase):
         minsize = float(sizes[0]) * 1024 * 1024 * 1024 if sizes else 0
         maxsize = float(sizes[-1]) * 1024 * 1024 * 1024 if sizes else 0
         # 分享率
-        if self._ratio and torrent.ratio <= float(self._ratio):
+        if self._ratio and torrent.ratio >= float(self._ratio):
             return None
         if self._time and torrent_seeding_time <= float(self._time) * 3600:
             return None
